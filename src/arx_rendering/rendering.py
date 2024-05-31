@@ -28,5 +28,3 @@ class Rendering:
     @classmethod
     def terminate(cls):
         glfw.terminate()
-
-Rendering.initialize()

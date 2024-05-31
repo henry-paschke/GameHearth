@@ -1,6 +1,6 @@
 import moderngl as gl
 from PIL import Image
-from .window import Window
+from .color import Color
 
 class Context:
     initialized: bool = False
@@ -15,4 +15,6 @@ class Context:
         cls.gl_context = gl.create_context()
         cls.initialized = True
 
-Context.initialize()
+    @classmethod
+    def clear(cls, color: Color = Color()) -> None:
+        cls.gl_context.clear(color.r, color.g, color.b, color.a)

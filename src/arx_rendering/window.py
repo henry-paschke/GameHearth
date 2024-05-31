@@ -2,6 +2,7 @@ import glfw
 from .window_settings import Window_settings
 from arx_resources import Loader
 
+
 class Window:
     initialized: bool = False
     main_window = None
@@ -23,7 +24,3 @@ class Window:
     @classmethod
     def flip(cls):
         glfw.swap_buffers(cls.main_window)
-
-    
-
-Window.initialize(Loader.load(".engine_resources/window_settings.pkl"))
